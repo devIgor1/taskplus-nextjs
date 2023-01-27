@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import styles from "../styles/home.module.css";
+import styles from "../styles/styles.module.css";
 import Image from "next/image";
 import heroImg from "../../public/assets/hero.png";
 import { GetStaticProps } from "next";
@@ -48,7 +48,7 @@ export default function Home({ posts, comments }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  //fetch the numbers from the bank and send them to the component
+  //fetch the numbers from the data and send them to the component
 
   const commentRef = collection(db, "comments");
   const postRef = collection(db, "tasks");
